@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/ui/hud.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/ui/pixel_label.gd" id="2"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+offset_right = 320.0
+offset_bottom = 180.0
+mouse_filter = 2
+script = ExtResource("1")
+
+[node name="TimeTitle" type="Node2D" parent="."]
+position = Vector2(7, 8)
+script = ExtResource("2")
+message = "TIME"
+ink = Color(0.85882353, 0.85098039, 0.56862745, 1)
+pixel_size = 1
+alignment = 0
+
+[node name="TimeValue" type="Node2D" parent="."]
+position = Vector2(39, 8)
+script = ExtResource("2")
+message = "0s"
+ink = Color(0.98431373, 0.98431373, 0.98431373, 1)
+pixel_size = 1
+alignment = 0
+
+[node name="BestTitle" type="Node2D" parent="."]
+position = Vector2(94, 8)
+script = ExtResource("2")
+message = "BEST"
+ink = Color(0.85882353, 0.85098039, 0.56862745, 1)
+pixel_size = 1
+alignment = 0
+
+[node name="BestValue" type="Node2D" parent="."]
+position = Vector2(127, 8)
+script = ExtResource("2")
+message = "0s"
+ink = Color(0.98431373, 0.98431373, 0.98431373, 1)
+pixel_size = 1
+alignment = 0
+
+[node name="CrumbTitle" type="Node2D" parent="."]
+position = Vector2(180, 8)
+script = ExtResource("2")
+message = "FOOD"
+ink = Color(0.85882353, 0.85098039, 0.56862745, 1)
+pixel_size = 1
+alignment = 0
+
+[node name="CrumbValue" type="Node2D" parent="."]
+position = Vector2(213, 8)
+script = ExtResource("2")
+message = "0"
+ink = Color(0.85882353, 0.68627451, 0.56862745, 1)
+pixel_size = 1
+alignment = 0
+
+[node name="PauseHint" type="Node2D" parent="."]
+position = Vector2(253, 8)
+script = ExtResource("2")
+message = "ESC"
+ink = Color(0.85882353, 0.85098039, 0.56862745, 1)
+pixel_size = 1
+alignment = 0
+
+[node name="ShelterIndicator" type="Node2D" parent="."]
+position = Vector2(160, 165)
+script = ExtResource("2")
+message = "UNDER LEAF"
+ink = Color(0.85882353, 0.68627451, 0.56862745, 1)
+pixel_size = 1
+alignment = 1

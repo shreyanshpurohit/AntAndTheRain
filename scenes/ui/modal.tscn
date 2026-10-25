@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3]
+[ext_resource type="Script" path="res://scripts/ui/modal.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/ui/pixel_label.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/ui/pixel_button.tscn" id="3"]
+
+[node name="Modal" type="Control"]
+visible = false
+layout_mode = 3
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1")
+
+[node name="Heading" type="Node2D" parent="."]
+position = Vector2(160, 47)
+script = ExtResource("2")
+message = "PAUSED"
+ink = Color(0.98431373, 0.98431373, 0.98431373, 1)
+pixel_size = 3
+alignment = 1
+
+[node name="Subtitle" type="Node2D" parent="."]
+position = Vector2(160, 79)
+script = ExtResource("2")
+message = "THE STORM CAN WAIT."
+ink = Color(0.56862745, 0.70588235, 0.85882353, 1)
+pixel_size = 1
+alignment = 1
+
+[node name="Details" type="Node2D" parent="."]
+position = Vector2(160, 95)
+script = ExtResource("2")
+message = ""
+ink = Color(0.85882353, 0.68627451, 0.56862745, 1)
+pixel_size = 1
+alignment = 1
+
+[node name="PrimaryButton" parent="." instance=ExtResource("3")]
+offset_left = 93.0
+offset_top = 112.0
+offset_right = 227.0
+offset_bottom = 134.0
+caption = "RESUME"
+
+[node name="MenuButton" parent="." instance=ExtResource("3")]
+offset_left = 93.0
+offset_top = 140.0
+offset_right = 227.0
+offset_bottom = 162.0
+caption = "MAIN MENU"

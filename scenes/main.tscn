@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ukthdlni8j67"]
+
+[ext_resource type="Script" uid="uid://bdskhhnee7x5q" path="res://scripts/main.gd" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/world/ground.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/actors/crumb.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/world/rain_system.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/actors/leaf.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scenes/actors/ant.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://scenes/world/ambient_rain.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://scenes/ui/title_screen.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://scenes/ui/modal.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://scenes/world/audio.tscn" id="11"]
+
+[node name="Game" type="Node2D" unique_id=173597250]
+script = ExtResource("1")
+
+[node name="Ground" parent="." unique_id=1988839715 instance=ExtResource("2")]
+
+[node name="Crumb" parent="." unique_id=45182986 instance=ExtResource("3")]
+position = Vector2(190, 108)
+
+[node name="RainSystem" parent="." unique_id=1762292805 instance=ExtResource("4")]
+
+[node name="Audio" parent="." unique_id=1800298911 instance=ExtResource("11")]
+
+[node name="Shelters" type="Node2D" parent="." unique_id=1375164207]
+
+[node name="LeafA" parent="Shelters" unique_id=1251206146 instance=ExtResource("5")]
+position = Vector2(64, 96)
+
+[node name="LeafB" parent="Shelters" unique_id=361854050 instance=ExtResource("5")]
+position = Vector2(112, 121)
+
+[node name="LeafC" parent="Shelters" unique_id=1740958404 instance=ExtResource("5")]
+position = Vector2(162, 92)
+
+[node name="LeafD" parent="Shelters" unique_id=783446555 instance=ExtResource("5")]
+position = Vector2(221, 118)
+
+[node name="LeafE" parent="Shelters" unique_id=1423895549 instance=ExtResource("5")]
+position = Vector2(269, 101)
+
+[node name="Ant" parent="." unique_id=96453936 instance=ExtResource("6")]
+
+[node name="AmbientRain" parent="." unique_id=719357419 instance=ExtResource("7")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1582458335]
+
+[node name="HUD" parent="UI" unique_id=1397415589 instance=ExtResource("9")]
+anchors_preset = 0
+
+[node name="TitleScreen" parent="UI" unique_id=1734183 instance=ExtResource("8")]
+anchors_preset = 0
+
+[node name="Modal" parent="UI" unique_id=2087681876 instance=ExtResource("10")]
+anchors_preset = 0

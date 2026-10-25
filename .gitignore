@@ -1,0 +1,8 @@
+.godot/
+*.import
+export/
+.DS_Store
+
+.godot/
+web/
+*.zip

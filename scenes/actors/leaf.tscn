@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+[ext_resource type="Script" path="res://scripts/actors/leaf.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/leaf_3.png" id="2"]
+[node name="Leaf" type="Node2D"]
+z_index = 4
+script = ExtResource("1")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2")
+texture_filter = 1
